@@ -1,20 +1,16 @@
-// vercel.json
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "app.js", // Your main Express app file
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)", // Matches anything under /api/
-      "dest": "/app.js" // Routes it to your index.js file
-    },
-    {
-      "src": "/(.*)", // Catch-all for other routes (like /api-docs)
-      "dest": "/app.js"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      
+      {
+        "src": "/(.*)",
+        "dest": "index.js"
+      }
+    ]
+  }
