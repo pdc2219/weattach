@@ -9,8 +9,8 @@ const config = {
     password: process.env.DB_PASSWORD,
     port: parseInt(process.env.DB_PORT) || 1433,
     options: {
-        encrypt: true, // Use encryption
-        trustServerCertificate: true // Trust self-signed certificates
+        encrypt: false, // Use encryption
+        trustServerCertificate: false // Trust self-signed certificates
     },
     pool: {
         max: parseInt(process.env.DB_POOL_MAX) || 10,
